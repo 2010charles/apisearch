@@ -11,7 +11,7 @@ function App() {
   const handleGenerateUniversities = async () => {
     try {
       const response = await axios.get(
-        'http://universities.hipolabs.com/search?country=' + searchTerm
+        `https://universitiesapi.onrender.com/v1/api/universities/${searchparam}` + searchTerm
       );
 
       setUniversities(response.data);
